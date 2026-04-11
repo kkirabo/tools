@@ -106,7 +106,7 @@ def get_regular_users(): # gets list of regular users based on OS
             users = [u.strip() for u in result.stdout.strip().split('\n') if u.strip()]
 
             # filter out important accounts, so their account passwords don't change without direct specification
-            exclude = ['administrator', 'guest', 'defaultaccount']
+            exclude = ['administrator', 'guest', 'defaultaccount', 'admin']
             users = [u for u in users if u.lower() not in exclude]
             return users
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
