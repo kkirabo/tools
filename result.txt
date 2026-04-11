@@ -1,0 +1,33 @@
+Password Rotation Tool
+========================================
+1. Change password for a specific account
+2. Change passwords for ALL regular local users
+3. Exit
+
+Select option (1/2/3): 2
+
+Rotating passwords for ALL regular users...
+Found 3 regular users: alice, bob, charlie
+==================================================
+
+--- Processing user: alice ---
+Generated in 3 attempts
+✓ alice password updated: aB3$9kLm#2pQr@8x
+
+--- Processing user: bob ---
+Generated in 1 attempts
+✓ bob password updated: Xy5&zPq7!mNw#4rT
+
+--- Processing user: charlie ---
+Generated in 5 attempts
+✓ charlie password updated: 8vU@mK2$pLq#9xRw
+
+==================================================
+Password rotation complete!
+Successfully rotated: 3/3 users
+
+--- Updated Passwords: ---
+  alice: aB3$9kLm#2pQr@8x
+  bob: Xy5&zPq7!mNw#4rT
+  charlie: 8vU@mK2$pLq#9xRw
+
