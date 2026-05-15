@@ -148,7 +148,7 @@ def rotate_localusers(): # rotate passwords for all reg users on system
     users = get_regular_users() 
 
     if not users:
-        print("No regular users found to rotate passwords for")
+        print("No regular users found to rotate passwords for...")
         return []
     
     print(f"Found {len(users)} regular users: {', '. join(users)}")
@@ -184,7 +184,7 @@ def rotate_localusers(): # rotate passwords for all reg users on system
     print(f"Successfully rotated: {len(results)/{len(users)}}")
 
     if results:
-        print("\n Rotated Password List:")
+        print("\n Rotated Password List: ")
         for user, password in results:
             print(f"{user}:{password}") 
     return results
@@ -209,10 +209,10 @@ def main():
             result = rotate_password(user) # secure password generated inside 
 
             if result:
-                print(f"\n Succesfully rotated password for {result[0]}")
+                print(f"\nSuccesfully rotated password for {result[0]}")
                 print(f"New password: {result[1]}")
             else:
-                print(f"\n Failed to rotate password for {user}")
+                print(f"\nFailed to rotate password for {user}")
         elif choice == '2': # multiple users
             print("\nRotating passwords for ALL local users...")
             confirm = input(f"This will change passwords for ALL regular users. Continue? (yes/no): ").strip().lower()
@@ -227,10 +227,10 @@ def main():
             print("Exiting...")
             return
         else:
-            print("invalid option. Please select 1, 2, or 3.")
+            print("Invalid option. Please select 1, 2, or 3.")
 
     except KeyboardInterrupt:
-        print("\n Password Rotater cancceled by user.")
+        print("\n Password Rotater cancelled by user.")
     except Exception as e:
         print(f"Unexpected error: {e}")
     
